@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HttpFileServer</RootNamespace>
+    <AssemblyName>HttpFileServer</AssemblyName>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+    <SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+    <Version>1.0.0</Version>
+    <Product>HttpFileServer</Product>
+    <Description>带图形界面的局域网 HTTP 文件服务器</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

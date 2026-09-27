@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>文件分享</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <div class="crumbs" id="crumbs"></div>
+  <div class="tools">
+    <input id="search" type="search" placeholder="搜索当前目录…" autocomplete="off">
+    <button id="selectBtn" title="多选打包下载">选择</button>
+    <button id="uploadBtn" class="primary">上传</button>
+    <input id="fileInput" type="file" multiple hidden>
+  </div>
+</header>
+
+<main>
+  <div id="list" role="list"></div>
+  <div id="empty" hidden>此文件夹为空</div>
+</main>
+
+<div id="selBar" hidden>
+  <span>已选 <b id="selCount">0</b> 项</span>
+  <span class="spacer"></span>
+  <button id="zipBtn" class="primary">打包下载</button>
+  <button id="clearBtn">取消</button>
+</div>
+
+<div id="dropOverlay" hidden><div>松开以上传到当前目录</div></div>
+
+<section id="uploadPanel" hidden>
+  <div class="up-head">
+    <b>上传任务</b>
+    <span class="spacer"></span>
+    <button id="clearUploads" class="ghost">清除已完成</button>
+  </div>
+  <div id="uploadList"></div>
+</section>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
